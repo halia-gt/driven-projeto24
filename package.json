@@ -1,15 +1,15 @@
 {
   "name": "tweteroo-back",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "> API responsável por registrar e validar os dados fornecido pelo frontend da aplicação.",
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "halia-gt",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.0.1",
