@@ -1,4 +1,4 @@
-import { Tweet } from "../services/tweets.service.js";
+import { filterTweetsByUser, Tweet } from "../services/tweets.service.js";
 
 function postTweet(req, res) {
     const { username, tweet } = req.body;
@@ -11,6 +11,18 @@ function postTweet(req, res) {
     }
 }
 
+function filterTweets(req, res) {
+    const { username } = req.params;
+
+    try {
+        const tweets = filterTweetsByUser(username);
+        return res.status(200).send(tweets);
+    } catch (error) {
+        return res.status(400).send(error);
+    }
+}
+
 export {
     postTweet,
+    filterTweets,
 };

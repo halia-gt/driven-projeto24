@@ -12,10 +12,14 @@ export class Tweet {
     }
 
     createNewTweet() {
-        const user  = users.find(e => e.username = this.username);
+        const user = users.find(e => e.username = this.username);
         tweets.push({
             ...user,
             tweet: this.tweet,
         });
     }
+}
+
+export function filterTweetsByUser(username) {
+    return tweets.filter(t => t.username === username);
 }
