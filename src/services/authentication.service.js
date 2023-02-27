@@ -1,4 +1,4 @@
-const users = [];
+export const users = [];
 
 export class AuthenticateUser {
     constructor({ username,  avatar }) {
